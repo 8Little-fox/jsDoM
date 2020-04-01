@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <script src="./test1.js" defer></script> -->
+    <style>
+        #boxs {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+
+        #boxs img {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #cccccc;
+        }
+
+        #box {
+            position: absolute;
+            display: none;
+            width: 150px;
+            height: 150px;
+            background-color: #fede4f;
+            opacity: .5;
+            cursor: move;
+        }
+
+        #big {
+            position: absolute;
+            display: none;
+            left: 400px;
+            top: 10px;
+            width: 400px;
+            height: 400px;
+            background-color: thistle;
+            overflow: hidden;
+            z-index: 999;
+            border: 1px solid #cccccc;
+        }
+
+
+
+        #big img {
+            width: 600px;
+            height: 600px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="boxs">
+        <img src="http://a2.att.hudong.com/36/48/19300001357258133412489354717.jpg" alt="">
+        <!-- 黄色透明盒子 -->
+        <div id="box"> </div>
+        <div id="big">
+            <img id="bigimg" src="http://a2.att.hudong.com/36/48/19300001357258133412489354717.jpg" alt="">
+        </div>
+    </div>
+     <script> 
+        var boxs = document.querySelector('#boxs');
+        var box = document.querySelector('#box');
+        var big = document.querySelector('#big');
+        boxs.addEventListener('mouseover', function () {
+            box.style.display = 'block';
+            big.style.display = 'block';
+        })
+        boxs.addEventListener('mouseout', function () {
+            box.style.display = 'none';
+            big.style.display = 'none';
+        })
+        boxs.addEventListener('mousemove', function (e) {
+            var x = e.pageX - this.offsetLeft;
+            var y = e.pageY - this.offsetTop;
+            var boxMax = boxs.offsetWidth - box.offsetWidth;
+            var boxX = x - box.offsetWidth / 2;
+            var boxY = y - box.offsetHeight / 2;
+            if (boxX <= 0) {
+                boxX = 0;
+            } else if (boxX >= boxMax) {
+                boxX = boxMax;
+            }
+            if (boxY <= 0) {
+                boxY = 0;
+            } else if (boxY >= boxMax) {
+                boxY = boxMax;
+            }
+            box.style.left = boxX + 'px';
+            box.style.top = boxY + 'px';
+
+            var bigImg = document.querySelector('#bigimg');
+            var bigMax = bigImg.offsetWidth - big.offsetWidth;
+            var bigX = boxX * bigMax / boxMax;
+            var bigY = boxY * bigMax / boxMax
+            bigImg.style.left = -bigX + 'px';
+            bigImg.style.top = -bigY + 'px';
+        })
+    </script>
+</body>
+
+</html>

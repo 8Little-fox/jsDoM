@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./main1.js" defer></script>
+    <style>
+        .nav {
+            color: crimson;
+            height: 72px;
+            position: relative;
+            width: 95%;
+            z-index: 2;
+        }
+
+        .nav_logo {
+            position: absolute;
+            cursor: pointer;
+            width: 20%;
+            height: 72px;
+            left: 80px;
+            top: 10px;
+            font-size: 12px;
+
+        }
+
+        .nav_list {
+            position: absolute;
+            right: 150px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            list-style: none;
+            cursor: pointer;
+            font-size: 15px;
+            width: 60%;
+        }
+
+        .nav_list_li {
+            display: none;
+            list-style: none;
+            padding-left: 0px;
+            font-size: 10px;
+            color: gray;
+        }
+
+        .nav_list_li li {
+            margin-top: 20px;
+        }
+
+        .nav_right {
+            position: absolute;
+            width: 10%;
+            height: 72px;
+            right: 0;
+            top: 25px;
+        }
+
+        .nav_right a {
+            font-size: 16px;
+            font-family: "PingFangSC-Regular";
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        .s_line {
+            color: #2b2e2e;
+
+        }
+
+        .banner_area {
+            position: absolute;
+            margin-top: -72px;
+            overflow: hidden;
+            z-index: -1;
+            width: 100%;
+
+        }
+
+        .active {
+            /* display: none; */
+            width: 100%;
+            background-color: aliceblue;
+            height: 350px;
+            border-top: 2px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav_logo">
+            <h1>Tencent 腾讯</h1>
+        </div>
+
+        <ul class="nav_list">
+            <li class="nav_li">
+                <p>About</p>
+                <ul class="nav_list_li">
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        About
+                    </li>
+
+                </ul>
+            </li>
+            <li class="nav_li">
+                <p>Business</p>
+                <ul class="nav_list_li">
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        About
+                    </li>
+
+                </ul>
+            </li>
+            <li class="nav_li">
+                <p>Employees</p>
+                <ul class="nav_list_li">
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        About
+                    </li>
+
+                </ul>
+            </li>
+            <li class="nav_li">
+                <p>Responsibility</p>
+                <ul class="nav_list_li">
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        About
+                    </li>
+
+                </ul>
+            </li>
+            <li class="nav_li">
+                <p>Investors</p>
+                <ul class="nav_list_li">
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        About
+                    </li>
+
+                </ul>
+            </li>
+            <li class="nav_li">
+                <p>Media</p>
+                <ul class="nav_list_li">
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        About
+                    </li>
+
+                </ul>
+            </li>
+        </ul>
+
+        <div class="nav_right">
+            <a class="lang_ch current" lang="zh-cn">简</a>
+            <i class="s_line">|</i>
+            <a class="lang_hk" lang="zh-hk">繁</a>
+            <i class="s_line">|</i>
+            <a class="lang_en" lang="zh-us">EN</a>
+        </div>
+    </div>
+    <div>
+        <div class="banner_area">
+            <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1089874897,1268118658&fm=26&gp=0.jpg"
+                alt="" width="100%">
+        </div>
+    </div>
+</body>
+
+</html>

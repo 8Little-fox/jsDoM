@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="./animate.js" defer></script>
+    <script src="./test.js" defer></script>
+    <style>
+        .main {
+            width: 980px;
+            height: 455px;
+            margin-left: 219px;
+            margin-top: 10px;
+        }
+
+        .focus {
+            position: relative;
+            width: 720px;
+            height: 455px;
+            background-color: brown;
+
+        }
+
+        .focus ul {
+            position: absolute;
+            margin-top: 100px;
+            left: 0;
+            width: 500%;
+        }
+
+        .focus ul li {
+            list-style: none;
+            float: left;
+        }
+
+        li img {
+            width: 90%;
+            height: 300px;
+        }
+
+
+        .arrow-l,
+        .arrow-r {
+            display: none;
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            width: 24px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 3);
+            line-height: 40px;
+            text-align: center;
+            color: white;
+            font-family: 'icomoon';
+            font-size: 18px;
+            z-index: 2;
+        }
+
+        .arrow-r {
+            right: 0;
+        }
+
+        .focus ol {
+            padding-left: 0px;
+            position: absolute;
+            left: 40px;
+            bottom: 20px;
+            list-style: none;
+
+        }
+
+        .focus ol li {
+            list-style: none;
+            width: 8px;
+            height: 8px;
+            margin-right: 14px;
+            list-style-type: circle;
+            float: left;
+        }
+
+        .current {
+            color: thistle;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="w">
+        <div class="main">
+            <div class="focus fl">
+                <a href="javascript:;" class="arrow-l">
+                    &</a> <a href="javascript:;" class="arrow-r">口
+                </a>
+                <ul>
+                    <li>
+                        <a href="#"><img
+                                src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1580630706153&di=1543b53de90c5e943e5f2012c456b44f&imgtype=0&src=http%3A%2F%2Fpic3.16pic.com%2F00%2F34%2F07%2F16pic_3407117_b.jpg"
+                                alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img
+                                src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1141722874,3718434624&fm=26&gp=0.jpg"
+                                alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img
+                                src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4024981923,3433833314&fm=26&gp=0.jpg"
+                                alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img
+                                src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1580630706153&di=1543b53de90c5e943e5f2012c456b44f&imgtype=0&src=http%3A%2F%2Fpic3.16pic.com%2F00%2F34%2F07%2F16pic_3407117_b.jpg"
+                                alt=""></a>
+                    </li>
+                </ul>
+                <!-- 小圆圈 -->
+                <ol class="circle">
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

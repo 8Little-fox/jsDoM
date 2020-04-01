@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./main.js" defer></script>
+    <style>
+        body {
+            background: url('images/img4.jpg');
+        }
+
+        .box {
+            position: relative;
+            top: 8px;
+            width: 200px;
+            margin: 100px auto;
+        }
+
+        .box img {
+            position: absolute;
+            top: 130px;
+            right: 28px;
+            width: 24px;
+            height: 20px;
+        }
+
+        #dl {
+            position: absolute;
+            margin-top: 30px;
+            width: 170px;
+            height: 23px;
+            background-color: deepskyblue;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <label>
+            <img src="./images/闭眼.png" id="eye">
+        </label>
+        <h1>登陆</h1>
+        <label> 账号：<input type="number" id="num"></label><br>
+        <label> 密码：<input type="password" id="pwd"></label><br>
+        <input type="radio"><label> 记住密码</label><br>
+        <label id="dl"><a href="#">登陆</a></label>
+    </div>
+</body>
+
+</html>
